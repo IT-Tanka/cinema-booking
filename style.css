@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  background-color: #621402;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+  width: 90%;
+}
+.header {
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
+    url("./img/bg_clear.png") no-repeat center top/cover;
+}
+.m-menu {
+  display: none;
+}
+.nav {
+  position: relative;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.logo {
+  margin-right: 57px;
+}
+.menu {
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+}
+.menu-item {
+  margin-right: 25px;
+}
+.menu-item:nth-last-child() {
+  margin-right: 0;
+}
+.menu-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.user {
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  margin-left: 11px;
+}
+.film {
+  margin-top: 90px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.film-title-small {
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.5;
+}
+.film_title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 11px;
+  margin-bottom: 23px;
+}
+.film_description {
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 150%;
+}
+.film-trailer {
+  margin: auto;
+  cursor: pointer;
+}
+.film_details {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.time {
+  display: flex;
+  align-items: center;
+}
+.time-icon {
+  margin-right: 14px;
+}
+.time-counter {
+  font-size: 16px;
+  line-height: 150%;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  margin-left: 34px;
+}
+.rating-icon {
+  margin-right: 14px;
+}
+.rating-current {
+  font-size: 24px;
+  line-height: 150%;
+}
+.button_run {
+  margin: auto;
+  cursor: pointer;
+}
+.session {
+  margin-top: 62px;
+  padding-top: 46px;
+  padding-bottom: 63px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.session-date-block {
+  display: flex;
+}
+.session-label {
+  font-size: 16px;
+  line-height: 150%;
+  display: block;
+  margin-bottom: 20px;
+}
+.session-date-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 15px;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.session-date-item:hover {
+  background-color: #fe8e05;
+  color: #621402;
+}
+.session-month {
+  font-size: 16px;
+  line-height: 19px;
+}
+.session-day {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+}
+.session-week {
+  font-size: 19px;
+  line-height: 22px;
+}
+.session-cinema {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-time {
+  display: flex;
+  flex-direction: column;
+}
+.select {
+  margin-top: 20px;
+  background: #fe8e059a;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+}
+.select-cinema {
+  width: 470px;
+}
+.scheme {
+  background: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.scheme-svg {
+  max-width: 1170px;
+}
+.scheme path:not(.light) {
+  fill: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.scheme path:not(.light):hover {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.scheme path.booked,
+.scheme path.booked:hover {
+  fill: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+.scheme path.active,
+.scheme path.active:hover {
+  fill: #fe8e05;
+}
+.legend {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  width: 90%;
+  margin: auto;
+  padding-top: 22px;
+  padding-bottom: 38px;
+}
+.legend-label {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.legend svg {
+  margin-right: 15px;
+}
+.price {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price-label {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+}
+.price-tag {
+  font-size: 52px;
+  line-height: 61px;
+}
+.button {
+  display: block;
+  padding: 24px 52px;
+  width: 254px;
+  height: 69px;
+  background: #fe8e05;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .select-cinema {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .logo {
+    margin-right: 20px;
+  }
+  .session {
+    flex-wrap: wrap;
+  }
+  .session-date {
+    flex-basis: 70%;
+    margin-bottom: 40px;
+  }
+  .session-cinema {
+    order: 3;
+  }
+  .menu-item {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .menu {
+    position: absolute;
+    flex-direction: column;
+    top: 40px;
+    left: 0;
+
+    padding-left: 20px;
+    margin-left: 0;
+    background-color: #621402;
+    z-index: 9;
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-500%);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .menu-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .m-menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+  }
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.2s;
+  }
+  .film {
+    flex-direction: column;
+  }
+  .film-trailer {
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .legend {
+    display: block;
+  }
+}
+@media (max-width: 441px) {
+  .session-time {
+    margin-bottom: 35px;
+  }
+  .session-label {
+    margin-bottom: 15px;
+  }
+  .select {
+    margin-top: 0;
+  }
+  .session-date-item {
+    height: 60px;
+    width: 60px;
+  }
+  .session-month {
+    font-size: 11px;
+    line-height: 12px;
+  }
+  .session-day {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .session-week {
+    font-size: 11px;
+    line-height: 12px;
+  }
+  .button-pay {
+    height: 50px;
+    width: 140px;
+    font-size: 18px;
+    padding: 3px;
+
+    text-align: center;
+  }
+}
