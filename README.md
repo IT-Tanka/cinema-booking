@@ -1,15 +1,15 @@
 # cinema-booking
-🎫 Сайт заказа билетов в кино
+## 🎫 movie ticket booking service
 
-Учебный проект Glo Academy
+training project
+### Сompleted the project: I
 
-Выполнила: я
+### Languages used:
 
-Применены технологии
-- html
+- HTML
+- CSS
+- JS
+ 
+### Technologies used:
 
-- css
-
-- адаптивная верстка
-
--  js
+- adaptive layout
